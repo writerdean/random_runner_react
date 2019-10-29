@@ -11,9 +11,9 @@ class ChooseRunnerIdentity extends React.Component {
       <Fragment>
       <ChooseRandomRunner />
       <div>
-        <ChooseAnarch />
-        <ChooseCriminal />
-        <ChooseShaper />
+        <ChooseAnarch faction='anarch' />
+        <ChooseCriminal faction='criminal' />
+        <ChooseShaper faction='shaper' />
       </div>
       </Fragment>
     )

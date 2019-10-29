@@ -7,8 +7,8 @@ import ChooseCorpIdentity from './ChooseCorpIdentity';
 function ChooseIdentity() {
   return (
     <Fragment>
-      <ChooseRunnerIdentity />
-      <ChooseCorpIdentity />
+      <ChooseRunnerIdentity side='runner' />
+      <ChooseCorpIdentity side='corp' />
   </Fragment>
   );
 }
