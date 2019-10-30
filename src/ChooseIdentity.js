@@ -1,8 +1,7 @@
 import React, { Fragment } from "react";
 import ChooseRunnerIdentity from './ChooseRunnerIdentity';
 import ChooseCorpIdentity from './ChooseCorpIdentity';
-
-
+import { filterByIdentity } from './filters';
 
 function ChooseIdentity() {
   return (
@@ -12,5 +11,5 @@ function ChooseIdentity() {
   </Fragment>
   );
 }
-
+console.log(filterByIdentity('runner'));
 export default ChooseIdentity;

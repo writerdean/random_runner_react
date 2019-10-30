@@ -9,17 +9,22 @@ import ChooseWeyland from './ChooseWeyland';
 
 
 class ChooseCorpIdentity extends React.Component {
+
+  chooseFaction = () => {
+    // set state to whatever current state is
+    // set state to faction of click
+    console.log('click');
+  }
   render() {
     return (
       <Fragment>
-      <ChooseRandomCorp />
+      <ChooseRandomCorp side={ this.props.side } />
       <div>
-        <ChooseHB />
-        <ChooseJinteki />
-        <ChooseNBN />
-        <ChooseWeyland />
+        <ChooseHB faction='hb' />
+        <ChooseJinteki faction='jinteki' />
+        <ChooseNBN faction='nbn' />
+        <ChooseWeyland faction='weyland' />
       </div>
-
       </Fragment>
     )
   }

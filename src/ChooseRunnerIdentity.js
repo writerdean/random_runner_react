@@ -6,10 +6,16 @@ import ChooseShaper from './ChooseShaper';
 
 
 class ChooseRunnerIdentity extends React.Component {
+
+  chooseFaction = () => {
+    // set state to whatever current state is
+    // set state to faction of click
+    console.log('click');
+  }
   render() {
     return (
       <Fragment>
-      <ChooseRandomRunner />
+      <ChooseRandomRunner side={ this.props.side }  />
       <div>
         <ChooseAnarch faction='anarch' />
         <ChooseCriminal faction='criminal' />
