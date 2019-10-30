@@ -3,7 +3,7 @@ import React from 'react';
 
 function ChooseHB() {
   return (
-    <a href = {'/identity'}><img src={require('./images/hb.png')} alt= 'icon' /></a>
+    <a href = {'/side/corp/hb'}><img src={require('./images/hb.png')} alt= 'icon' /></a>
   );
 }
 

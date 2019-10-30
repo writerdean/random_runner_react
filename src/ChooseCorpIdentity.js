@@ -4,16 +4,15 @@ import ChooseHB from './ChooseHB';
 import ChooseJinteki from './ChooseJinteki';
 import ChooseNBN from './ChooseNBN';
 import ChooseWeyland from './ChooseWeyland';
+import filterByIdentity from './filters';
 
 
 class ChooseCorpIdentity extends React.Component {
-  handleClick() {
-    console.log('this is:', this);
-  }
+
   render() {
     return (
       <Fragment>
-      <ChooseRandomCorp side={ this.props.side } onClick={(e) => this.handleClick(e)}/>
+      <ChooseRandomCorp onClick={filterByIdentity} side={ this.props.side }  />
       <div>
         <ChooseHB side={ this.props.side } faction='hb' />
         <ChooseJinteki side={ this.props.side } faction='jinteki' />

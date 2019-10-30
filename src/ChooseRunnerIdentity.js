@@ -3,18 +3,15 @@ import ChooseRandomRunner from './ChooseRandomRunner';
 import ChooseAnarch from './ChooseAnarch';
 import ChooseCriminal from './ChooseCriminal';
 import ChooseShaper from './ChooseShaper';
+import filterByIdentity from './filters';
 
 
 class ChooseRunnerIdentity extends React.Component {
-
-  handleClick = () => {
-    console.log('this is:', this);
-  }
   
   render() {
     return (
       <Fragment>
-      <ChooseRandomRunner  onclick={(e) => this.handleClick(e)} />
+      <ChooseRandomRunner  onClick={filterByIdentity} side={ this.props.side }  />
       <div>
         <ChooseAnarch side={ this.props.side } faction='anarch' />
         <ChooseCriminal side={ this.props.side } faction='criminal' />
