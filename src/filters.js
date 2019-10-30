@@ -2,20 +2,11 @@ import allCards from './cards';
 
 const data = allCards.data
 
-export function filterByIdentity() {
-  return data.filter(function(el) {
-      if (el["type_code"] === "identity") {
-        return true;
-      }
-  });
+export function filterByIdentity(side) {
+  console.log(`clickity click click filters.js`)
+  return data.filter((el) => 
+      (el["type_code"] === "identity") && (el["side_code"] === side) ? true : null
+  );
 }
 
-export function filterByAllIdentities() {
-  return data.filter(function(el) {
-      if (el["type_code"] === "identity") {
-        return true;
-      }
-  });
-}
-
-// export default filterByIdentity;
+export default filterByIdentity;

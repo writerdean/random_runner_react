@@ -6,24 +6,19 @@ import ChooseNBN from './ChooseNBN';
 import ChooseWeyland from './ChooseWeyland';
 
 
-
-
 class ChooseCorpIdentity extends React.Component {
-
-  chooseFaction = () => {
-    // set state to whatever current state is
-    // set state to faction of click
-    console.log('click');
+  handleClick() {
+    console.log('this is:', this);
   }
   render() {
     return (
       <Fragment>
-      <ChooseRandomCorp side={ this.props.side } />
+      <ChooseRandomCorp side={ this.props.side } onClick={(e) => this.handleClick(e)}/>
       <div>
-        <ChooseHB faction='hb' />
-        <ChooseJinteki faction='jinteki' />
-        <ChooseNBN faction='nbn' />
-        <ChooseWeyland faction='weyland' />
+        <ChooseHB side={ this.props.side } faction='hb' />
+        <ChooseJinteki side={ this.props.side } faction='jinteki' />
+        <ChooseNBN side={ this.props.side } faction='nbn' />
+        <ChooseWeyland side={ this.props.side } faction='weyland' />
       </div>
       </Fragment>
     )
